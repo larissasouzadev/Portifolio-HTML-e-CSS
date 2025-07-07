@@ -1,0 +1,416 @@
+
+:root {
+  --color_bg: #000000;
+  --color_font: #FFFFFF;
+  --colorful-font: #E5005F;
+  --color-btn: #E5005F;
+  --border: #E5005F;
+  --light-border: #606060;
+}
+
+
+body {
+  background-color: var(--color_bg);
+  box-sizing: border-box;
+  width: auto;
+  height: auto;
+  text-decoration: none;
+  color: var(--color_font);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, sans-serif;
+}
+
+/* Estilo base para nav */
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background:var(--color_bg);
+  backdrop-filter: blur(22px);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Lista principal */
+nav .nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px 20px;
+  gap: 10px;
+}
+
+nav li {
+  list-style: none;
+}
+
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 10px 15px;
+  font-family: Roboto;
+  display: flex;
+  font-weight: 100;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+/* Linha de hover (4px abaixo do texto) */
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* <- aqui está o espaçamento abaixo do texto */
+  left: 0;
+  height: 2px;
+  width: 0%;
+  font-weight: 200;
+  background-color: var(--border);
+  transition: width 0.4s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--border);
+}
+
+
+nav a:hover {
+  color: var(--border);
+}
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+  flex-direction: column;
+  padding-top: 60px;
+  z-index: 1001;
+}
+nav a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 18px;
+  padding: 10px 15px;
+  font-family: Roboto;
+  display: flex;
+  font-weight: 100;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+
+.sidebar a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; 
+  left: 0;
+  height: 2px;
+  width: 0%;
+  font-weight: 200;
+  background-color: var(--border);
+  transition: width 0.4s ease-in-out;
+}
+
+.sidebar a:hover::after {
+  width: 100%;
+}
+
+.sidebar a:hover {
+  color: var(--border);
+}
+
+
+.sidebar a:hover {
+  color: var(--border);
+}
+
+.sidebar li a {
+  color: var(--color_font);
+  padding: 15px;
+  transition: color 3s;
+}
+
+.menu-button {
+  display: none;
+  cursor: pointer;
+}
+
+/* grids  */
+
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-gap: 5px;
+  width: 40%;
+  gap: 5px;
+  height: auto;
+  justify-self: right;
+  align-items: right;
+  margin-left: 40%;
+  background-color: #000000;
+  padding: 5px;
+  position: relative;
+
+}
+.rectangle_border{
+  display: flex;
+  border-radius: 28px;
+  width: 185px;
+  height: 163px;
+  background-color: var(--color_bg);
+  border: 2px solid var(--border);
+
+}
+.rectangle_full{
+  display: flex;
+  border-radius: 28px;
+  width: 185px;
+  height: 163px;
+  background-color: var(--color-btn);
+  border: 2px solid var(--border);
+
+
+}
+
+.image-grid {
+  position: absolute;
+  top: 10%;
+  left: 62%;
+  gap: 5px;
+  height: auto;
+  justify-self: right;
+  align-items: right;
+  z-index: 10;
+  pointer-events: none; /* impede que a imagem capture eventos de clique */
+}
+
+.image-grid img {
+  width: 500px;
+  height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-links {
+    justify-content: space-between;
+  }
+
+
+.nav-btn{
+  display: flex;
+  background-color: #000000;
+  padding: 10px;
+  gap:10px;
+  margin:20px;
+  width: 170px;
+  font-size: 10px;
+  align-items: center;
+  height: 45px;
+  border-radius: 28px;
+  border: var(--border) solid 1px ;  
+  transition: transform 0.3s ease;
+}
+
+.nav-btn:hover {
+  transform: scale(1.05);
+}
+
+.ball-main{
+  width: 50px;
+  height: 50px;
+  right:60%;
+  align-items: left;
+  justify-self: left;
+  margin-left: 10%;
+  margin-top: 30%;
+  border-radius: 50%;
+  background-color: var(--border);
+  box-shadow: 0 4px 6px rgba(0,0,0,00.2);
+
+}
+.ball-main h1{
+  text-align: center;
+  font-family: Roboto;
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 500;
+  backdrop-filter: blur(2px);
+}
+
+
+.ball2 {
+width: 30px;
+  height: 30px;
+  right:60%;
+  align-items: left;
+  justify-self: left;
+  margin-left: 60%;
+  margin-top: 10%;
+  border-radius: 50%;
+  background-color: var(--border);
+  box-shadow: 0 4px 6px rgba(0,0,0,00.2);
+
+}
+.ball3 {
+width: 30px;
+  height: 30px;
+  right:60%;
+  align-items: left;
+  justify-self: left;
+  margin-left: 80%;
+  margin-top: 30%;
+  border-radius: 50%;
+  background-color: var(--border);
+  box-shadow: 0 4px 6px rgba(0,0,0,00.2);
+
+}
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-gap: 5px;
+  width: 100%;
+  gap: 5px;
+  margin-right: 35%;
+  height: auto;
+  justify-self:center;
+  align-items: center;
+  background-color: #000000;
+  padding: 5px;
+
+}
+.image-grid img {
+  width: 300px;
+  height: 400px;
+}
+.image-grid {
+  position: absolute;
+  top: 50%;
+  left: 32%;
+  gap: 5px;
+  height: auto;
+  justify-self: right;
+  align-items: right;
+  z-index: 10;
+  pointer-events: none; /* impede que a imagem capture eventos de clique */
+}
+.rectangle_border{
+  display: flex;
+  border-radius: 28px;
+  width: 160px;
+  height: 140px;
+  background-color: var(--color_bg);
+  border: 2px solid var(--border);
+
+}
+.rectangle_full{
+  display: flex;
+  border-radius: 28px;
+  width: 185px;
+  height: 163px;
+  background-color: var(--color-btn);
+  border: 2px solid var(--border);
+
+
+}
+.menu-button{
+  margin-right: 10%;
+}
+
+}
+/* tablet */
+@media (max-width: 991.98px) {
+.ball-main h1{
+  margin-top: 30%;
+  top: 30%;
+  font-size: 52px;
+}
+.ball1{
+  display: none;
+
+}
+}
+/* desktop e notebook */
+@media (min-width: 995px) {
+  .nav-bar ul {
+    flex-direction: row;
+  }
+.nav-bar{
+  display: none;
+}
+  .sidebar .nav-btn {
+    flex-direction: row;
+    gap: 10px;
+    width: 100px;
+    height:auto;
+  }
+.ball-main{
+  width: 100px;
+  height: 100px;
+  right:60%;
+  align-items: left;
+  justify-self: left;
+  margin-left: 10%;
+  margin-top: 10%;
+  border-radius: 50%;
+  background-color: var(--border);
+  box-shadow: 0 4px 6px rgba(0,0,0,00.2);
+
+}
+.ball-main h1{
+  text-align: center;
+  font-family: Roboto;
+  font-size: 128px;
+  font-style: normal;
+  font-weight: 700;
+  backdrop-filter: blur(2px);
+}
+
+ 
+}
