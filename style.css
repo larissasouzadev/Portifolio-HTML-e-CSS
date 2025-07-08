@@ -25,7 +25,6 @@ body {
   font-family: Roboto, sans-serif;
 }
 
-/* Estilo base para nav */
 nav {
   position: fixed;
   width: 100%;
@@ -37,7 +36,7 @@ nav {
   z-index: 1000;
 }
 
-/* Lista principal */
+
 nav .nav-links {
   display: flex;
   justify-content: flex-end;
@@ -63,11 +62,11 @@ nav a {
   transition: color 0.3s ease;
 }
 
-/* Linha de hover (4px abaixo do texto) */
+
 nav a::after {
   content: "";
   position: absolute;
-  bottom: -4px; /* <- aqui está o espaçamento abaixo do texto */
+  bottom: -4px; 
   left: 0;
   height: 2px;
   width: 0%;
@@ -198,15 +197,25 @@ nav a {
   justify-self: right;
   align-items: right;
   z-index: 10;
-  pointer-events: none; /* impede que a imagem capture eventos de clique */
+  pointer-events: none; 
 }
 
 .image-grid img {
   width: 500px;
   height: 600px;
+   backdrop-filter: blur(2px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.image-grid img:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+ 
+
+
 .title{
-  text-align: center;
+text-align: center;
 -webkit-text-stroke-width: 2px;
 -webkit-text-stroke-color: #000;
 font-family: Inter;
@@ -240,7 +249,7 @@ font-weight: 700;
   height: 0;
   border-left: 50px solid transparent;
   border-right: 50px solid transparent;
-  border-bottom: 100px solid var(--color_font); /* Cor do triângulo */
+  border-bottom: 100px solid var(--color_font); 
 }
 .triangle-border-wrapper {
   width: 0;
@@ -294,9 +303,60 @@ line-height: normal;
   transition: width 0.3s ease;
 }
 
-.text-fieldhover::after {
+.text-field hover::after {
   width: 100%;
 }
+.grid-habilyties h4{
+  font-size: 120px;
+  font-family: Roboto;
+  align-items: center;
+  justify-self: center;
+  color: var(--color_bg);
+  -webkit-text-stroke:2px  var(--border);
+  font-weight: 700;
+  }
+.conteiner{
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+  align-items: center;
+  justify-self: center;
+  margin-left: 50%;
+  gap:150px;
+  padding: 10px;
+  grid-auto-rows: auto auto;
+
+}
+.h-habilities{
+    font-size: 120px;
+   font-family: Roboto;
+  color: var(--color_bg);
+  -webkit-text-stroke:2px  var(--border);
+  font-weight: 700;
+  align-items: center;
+  justify-self: center;
+  }
+
+
+.conteiner-grid{
+  background-color: var(--color_bg);
+  width: 382px;
+  height: 297px;
+  border-radius: 28px;
+  border: 3px solid var(--border);
+ 
+  
+}
+.conteiner-grid p {
+  align-items: center;
+  justify-self: center;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 200;
+  margin: 20px;
+}
+
 
 
 
@@ -334,15 +394,23 @@ line-height: normal;
   padding: 10px;
   gap:10px;
   margin:20px;
-  width: 170px;
-  font-size: 10px;
+  margin-left: -15%;
+  width: 120px;
+  font-size: 8px;
   align-items: center;
-  height: 45px;
+  justify-content: center;
+  height: 35px;
   border-radius: 28px;
   border: var(--border) solid 1px ;  
   transition: transform 0.3s ease;
 }
-
+.nav-bar a {
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  padding-top: 10px;
+  margin: 10px;
+}
 .nav-btn:hover {
   transform: scale(1.05);
 }
@@ -398,11 +466,11 @@ width: 30px;
 }
 .grid{
   display: grid;
-  grid-template-columns: auto auto auto ;
+  grid-template-columns: auto auto  ;
   grid-gap: 5px;
   width: 100%;
   gap: 5px;
-  margin-right: 35%;
+  margin-right: 20%;
   height: auto;
   justify-self:center;
   align-items: center;
@@ -413,22 +481,24 @@ width: 30px;
 .image-grid img {
   width: 300px;
   height: 400px;
+  align-items: center;
+  justify-self: center;
 }
 .image-grid {
   position: absolute;
   top: 50%;
-  left: 32%;
+  left: 2%;
   gap: 5px;
   height: auto;
-  justify-self: right;
-  align-items: right;
+  justify-self: center;
+  align-items: center;
   z-index: 10;
-  pointer-events: none; /* impede que a imagem capture eventos de clique */
+  pointer-events: none; 
 }
 .rectangle_border{
   display: flex;
   border-radius: 28px;
-  width: 160px;
+  width: 140px;
   height: 140px;
   background-color: var(--color_bg);
   border: 2px solid var(--border);
@@ -437,32 +507,41 @@ width: 30px;
 .rectangle_full{
   display: flex;
   border-radius: 28px;
-  width: 185px;
-  height: 163px;
+  width: 140px;
+  height: 140px;
   background-color: var(--color-btn);
   border: 2px solid var(--border);
 
 
 }
 .menu-button{
-  margin-right: 10%;
+  margin-right: 40%;
 }
 .title h3{
-font-size: 70px;
+font-size: 30px;
 font-family: Roboto;
 color: var(--color_bg);
 -webkit-text-stroke:2px  var(--border);
 font-weight: 700;
 
 }
+.text-field{
+  align-items: center;
+  justify-self: center;
+  margin-left:-120% ;
+}
 .text-field p {
 color: var(--color_font);
 text-align: center;
 font-family: Roboto;
-font-size: 16px;
-width: 400px;
-margin-top: -70%;
+font-size: 14px;
+width: 300px;
+align-items: center;
+margin-left:20%;
+justify-self: center;
+margin-top: 5%;
 font-style: normal;
+position: absolute;
 font-weight: 200;
 line-height: normal;
 }
@@ -470,7 +549,6 @@ line-height: normal;
 
 .text-field::after {
   content: "";
-  position: absolute;
   width: 0;
   height: 2px;
   bottom: 0;
@@ -481,6 +559,56 @@ line-height: normal;
 
 .text-fieldhover::after {
   width: 100%;
+}
+.element-triangle{
+  display: none;
+  gap:20px;
+  align-self:right ;
+  margin-top: 20%;
+  justify-items:right ;
+  margin-left: 40%;
+  padding: 10px;
+
+}
+.h-habilities{
+
+margin-top: 70%;
+font-size: 30px;
+font-family: Roboto;
+color: var(--color_bg);
+-webkit-text-stroke:2px  var(--border);
+font-weight: 700;
+margin-left: 10%;
+}
+.conteiner-grid {
+  background-color: var(--color_bg);
+  width: 300px;
+  height: auto;
+  font-weight: 100;
+  margin-right: 50%;
+  border-radius: 28px;
+  border: 2px solid var(--border);
+  display: grid;
+  justify-self: center;
+  align-items: center;
+}
+
+.conteiner {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+  padding: 10px;
+}
+.tech-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--color_font);
+  line-height: 1.6;
 }
 
 
@@ -500,7 +628,7 @@ line-height: normal;
 /* desktop e notebook */
 @media (min-width: 995px) {
   .nav-bar ul {
-    flex-direction: row;
+    flex-direction: row; 
   }
 .nav-bar{
   display: none;
@@ -531,7 +659,12 @@ line-height: normal;
   font-style: normal;
   font-weight: 700;
   backdrop-filter: blur(2px);
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.ball-main h1:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
  
 }
