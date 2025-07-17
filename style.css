@@ -1284,7 +1284,9 @@ font-weight: 700;
 .text-field{
   align-items: center;
   justify-self: center;
-  margin-left:-120% ;
+  margin:20px;
+  margin-right: 25%;
+
 }
 .text-field p {
 color: var(--color_font);
@@ -1293,7 +1295,6 @@ font-family: Roboto;
 font-size: 14px;
 width: 300px;
 align-items: center;
-margin-left:30%;
 justify-self: center;
 margin-top: 5%;
 font-style: normal;
